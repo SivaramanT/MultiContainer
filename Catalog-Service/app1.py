@@ -8,7 +8,7 @@ redis = Redis(host='redis', port=6379)
 
 @app.route("/")
 def hello():   
-    html = "<h3>Hello APP1 {name}!</h3>" \
+    html = "<h3>Hello This is Catalog-Service App1 {name}!</h3>" \
            "<b>Hostname:</b> {hostname}<br/>" \
 	   "<b>Hello World! I have been seen</b> {count}<br/> <b>times.\n</b>"
     return html.format(name=os.getenv("NAME", "world"), hostname=socket.gethostname(), count = redis.incr('hits'))
