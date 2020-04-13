@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():   
-    html = "<h3>Hello APP2{name}!</h3>" \
+    html = "<h3>Hello This is Review-Service App2{name}!</h3>" \
            "<b>Hostname:</b> {hostname}<br/>" 
     return html.format(name=os.getenv("NAME", "APP2 - world"), hostname=socket.gethostname())
 
