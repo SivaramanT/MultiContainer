@@ -2,13 +2,13 @@ version: '3'
 
 services:
   catalog-service:
-    image: siddhanthhn/catalog-service
+    image: saha94/catalog-service
     ports: 
      - "8000:80"
   redis:
     image: redis:alpine
   review-service:
-    image: siddhanthhn/review-service
+    image: saha94/review-service
     ports:
     - "8050:90"
     restart: always
@@ -21,7 +21,7 @@ services:
           cpus: '0.001'
           memory: 20M
   order-service:
-    image: siddhanthhn/order-service
+    image: saha94/order-service
     ports:
     - "8100:100"
     restart: always
